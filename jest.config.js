@@ -1,6 +1,6 @@
 // jest.config.js
 /** @type {import('ts-jest').JestConfigWithTsJest} */
-export default {
+module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   transform: {
