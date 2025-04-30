@@ -1,5 +1,6 @@
 {
   "name": "fuzzy-names",
+<<<<<<< Updated upstream
   "version": "4.7.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,15 +14,30 @@
     }
   },
   "sideEffects": false,
+=======
+  "version": "4.4.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+>>>>>>> Stashed changes
   "license": "MIT",
   "files": [
     "dist"
   ],
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
+<<<<<<< Updated upstream
     "clean": "rimraf dist",
     "build:ts": "tsc",
     "build:bundle": "rollup -c",
     "build": "yarn clean && yarn build:ts && yarn build:bundle && rimraf dist/temp",
+=======
+    "clean": "yarn run rimraf dist",
+    "build": "yarn clean && tsup",
+>>>>>>> Stashed changes
     "start": "yarn build && node dist/index.js",
     "start:dev": "rollup -c -w",
     "test": "jest"
@@ -47,7 +63,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
+<<<<<<< Updated upstream
     "tslib": "^2.8.1",
+=======
+    "tsup": "^8.4.0",
+>>>>>>> Stashed changes
     "typescript": "^5.5.4"
   },
   "dependencies": {
